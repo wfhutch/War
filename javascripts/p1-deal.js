@@ -1,4 +1,7 @@
-define (["jquery", "q"], function($, Q) {
+
+define(function(require) {
+  var $ = require("jquery");
+  var Q = require("q");
 
   return function() {  
     var deferred = Q.defer();
@@ -7,7 +10,7 @@ define (["jquery", "q"], function($, Q) {
       url: "http://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1"
     })
     .done(function(data) {
-      console.log(data);
+      // console.log(data);
       deferred.resolve(data);
     })
     .fail(function(xhr, status, error) {

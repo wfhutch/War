@@ -5,3 +5,23 @@
 #p2draw {
   display: none;
 }
+
+body {
+  background-color: #076324;
+  color: white;
+}
+
+#player1 {
+  margin-left: 20px;
+}
+
+.heading {
+  margin-left: 20px;
+  font-size: 4em;
+}
+
+.btn {
+  color: red;
+  font-weight: 600;
+  border: 3px solid black;
+}

@@ -17,16 +17,16 @@ define(function(require) {
       $("#p2deal").css("display", "none");
       $("#p2draw").css("display", "block");
     });
-
-    $("#p2draw").click(function(e) {
-      e.preventDefault();
-      console.log("draw 2 clicked");
-      var player2Draw = p2Draw();
-      player2Draw.then(function(card) {
-        console.log(card);
-        p2Card = card.cards[0].image;
-        $("#p2Card").html("<img src='" + p2Card + "'>");
-      });
   });
+
+  $("#p2draw").click(function(e) {
+    e.preventDefault();
+    console.log("draw 2 clicked");
+    var player2Draw = p2Draw(p2Id);
+    player2Draw.then(function(card) {
+      console.log(card);
+      p2Card = card.cards[0].image;
+      $("#p2Card").html("<img src='" + p2Card + "'>");
+    });
   });
 });

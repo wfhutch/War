@@ -1,11 +1,11 @@
+
 define (["jquery", "q"], function($, Q) {
 
-  return function() {  
+  return function(id) {  
     var deferred = Q.defer();
 
-
     $.ajax ({
-      url: "http://deckofcardsapi.com/api/deck/6nwawthk8xkp/draw/?count=1"
+      url: "http://deckofcardsapi.com/api/deck/" + id + "/draw/?count=1"
     })
     .done(function(data) {
       console.log(data);
