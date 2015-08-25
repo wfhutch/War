@@ -10,7 +10,7 @@ define(function(require) {
       url: "http://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1"
     })
     .done(function(data) {
-      // console.log(data);
+      console.log(data);
       deferred.resolve(data);
     })
     .fail(function(xhr, status, error) {

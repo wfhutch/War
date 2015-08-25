@@ -4,31 +4,60 @@ define(function(require) {
   var p1Count = 0;
   var p2Value;
   var p2Count = 0;
-  var allCards = [2, 3, 4, 5, 6, 7, 8, 9, 10, "JACK", "QUEEN", "KING", "ACE"];
-  console.log (allCards);
 
   return {
     p1Value: function(card) {
       console.log(card.cards[0].value);
-
-      for (i=0; i<allCards.length; i++) {
-        if (card.cards[0].value === allCards[i]) {
-          console.log(allCards[i]);
-          p1Value = allCards.indexOf(allCards[i]);
-        }
-      }
-      // if (card.cards[0].value == "JACK") {
-      //   p1Value = 11;
-      // } else if(card.cards[0].value == "QUEEN") {
-      //   p1Value = 12;
-      // } else if(card.cards[0].value == "KING") {
-      //   p1Value = 13;  
-      // } else if(card.cards[0].value == "ACE") {
-      //   p1Value = 14;
+      p1Value = (card.cards[0].value);
+      // if (p2Value > p1Value) {
+      //   p2Count += 2;
+      //   console.log("p2 count", p2Count);
       // } else {
-      //     p1Value = card.cards[0].value;
-          console.log(p1Value);
-      //   } 
+      //   p1Count += 2;
+      //   console.log("p1 count", p1Count);
+      // }
+    },
+
+    p2Value: function(card) {
+      console.log(card.cards[0].value);
+      p2Value = (card.cards[0].value);
+      console.log("p1Value", p1Value);
+      console.log("p2Value", p2Value);
+
+      if (p1Value > p2Value) {
+        p1Count += 2;
+        console.log("p1 count", p1Count);
+      } else if 
+        (p1Value < p2Value) {
+        p2Count += 2;
+        console.log("p2 count", p2Count);
+        } else if
+          (p1Value == p2Value) {
+            p1Count += 1;
+            p2Count += 1;
+            console.log("p1 count", p1Count);
+            console.log("p2 count", p2Count);
+          }
     }
+
+    // if (p1Value > p2Value) {
+    //   p1Count += 2;
+    //   console.log(p1Count);
+    // }; 
+
+    // if (p1Value < p2Value) {
+    //   p2Count += 2;
+    //   console.log(p2Count);
+    // }; 
+
+    // if (p1Value = p2Value) {
+    //   p1Count += 1;
+    //   p2Count += 1;
+    //   console.log(p1Count, p2Count);
+    // };
+    
   };
+
 });
+
+        // fbModule.updateScore({p2Value: p2Value, p1Value: p1Value})
