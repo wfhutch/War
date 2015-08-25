@@ -11,6 +11,12 @@ body {
 #player1 {
   margin-left: 20px; }
 
+#scoreTitle {
+  margin-left: 20px; }
+
+.score {
+  font-size: 20px; }
+
 .heading {
   margin-left: 20px;
   font-size: 4em; }

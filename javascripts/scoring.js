@@ -1,3 +1,4 @@
+
 define(function(require) {
   var $ = require("jquery");
   var p1Value;
@@ -9,13 +10,6 @@ define(function(require) {
     p1Value: function(card) {
       console.log(card.cards[0].value);
       p1Value = (card.cards[0].value);
-      // if (p2Value > p1Value) {
-      //   p2Count += 2;
-      //   console.log("p2 count", p2Count);
-      // } else {
-      //   p1Count += 2;
-      //   console.log("p1 count", p1Count);
-      // }
     },
 
     p2Value: function(card) {
@@ -38,24 +32,11 @@ define(function(require) {
             console.log("p1 count", p1Count);
             console.log("p2 count", p2Count);
           }
+      $("#p1Score").html(p1Count);
+      $("#p2Score").html(p2Count);
+      // $(".score").css("display", "block");
     }
 
-    // if (p1Value > p2Value) {
-    //   p1Count += 2;
-    //   console.log(p1Count);
-    // }; 
-
-    // if (p1Value < p2Value) {
-    //   p2Count += 2;
-    //   console.log(p2Count);
-    // }; 
-
-    // if (p1Value = p2Value) {
-    //   p1Count += 1;
-    //   p2Count += 1;
-    //   console.log(p1Count, p2Count);
-    // };
-    
   };
 
 });
