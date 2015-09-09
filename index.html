@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <h1 class="heading">War!</h1>
+    <h1 class="heading war">War!</h1>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
@@ -9,7 +9,6 @@
     <title>War</title>
   </head>
   <body>
-
     <div class="row"> <!-- row that has deal buttons -->
       <div class="col-md-6">
         <div id="player1">
@@ -24,7 +23,6 @@
         </div>
       </div>
     </div>  <!-- end deal button row -->
-
     <div class="row">  <!-- row that has draw buttons -->
       <div class="col-md-6">
         <div id="player1">
@@ -37,15 +35,17 @@
         </div>
       </div>
     </div>  <!-- end of row of draw buttons -->
-
     <div class="row">  <!-- row that holds cards -->
-      <div class="col-md-1"></div>
-      <div id="p1Card" class="col-md-4"></div>
       <div class="col-md-2"></div>
-      <div id="p2Card" class="col-md-4"></div>
-      <div class="col-md-1"></div>
+      <div id="p1Card" class="col-md-2"></div>
+      <div class="col-md-4">
+        <h2 id="p1winner" class="text-right invisible winner">Player One Wins!</h2>
+        <h2 id="p2winner" class="text-right invisible winner">Player Two Wins!</h2>
+        <h2 id="tie" class="text-right invisible winner">It's A Tie!</h2>
+      </div>
+      <div id="p2Card" class="col-md-2"></div>
+      <div class="col-md-2"></div>
     </div>  <!-- end of row that holds cards --> 
-
     <div class="row">  <!-- row that has draw buttons -->
       <div class="col-md-6">
         <div id="scoreTitle" class="score">Score:
@@ -58,15 +58,6 @@
         </div>
       </div>
     </div>  <!-- end of row of draw buttons -->
-
-
-
-
-
-  	
-
-
 		<script data-main="javascripts/main" src="lib/bower_components/requirejs/require.js"></script>
 	</body>
-
 </html>

@@ -8,15 +8,11 @@ define(function(require) {
 
   return {
     p1Value: function(card) {
-      console.log(card.cards[0].value);
-      p1Value = (card.cards[0].value);
+      p1Value = (card);
     },
 
-    p2Value: function(card) {
-      console.log(card.cards[0].value);
-      p2Value = (card.cards[0].value);
-      console.log("p1Value", p1Value);
-      console.log("p2Value", p2Value);
+    p2Value: function(card2) {
+      p2Value = (card2);
 
       if (p1Value > p2Value) {
         p1Count += 2;
@@ -29,12 +25,21 @@ define(function(require) {
           (p1Value == p2Value) {
             p1Count += 1;
             p2Count += 1;
-            console.log("p1 count", p1Count);
-            console.log("p2 count", p2Count);
           }
       $("#p1Score").html(p1Count);
       $("#p2Score").html(p2Count);
-      // $(".score").css("display", "block");
+    },
+
+    winner: function() {
+      if (p1Count > p2Count) {
+        $("#p1winner").removeClass("invisible");
+      } else if 
+          (p1Count < p2Count) {
+            $("#p2winner").removeClass("invisible");
+        } else if 
+            (p1Count == p2Count) {
+              $("tie").removeClass("invisible");
+            }
     }
 
   };

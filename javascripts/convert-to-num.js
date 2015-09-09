@@ -1,49 +1,52 @@
 define(function(require) {
   var $ = require("jquery");
 
-  function convert() {
-    if (card.cards[0].value === "2") {
+  return function(card) {
+    console.log("convert card", card);
+    var cardValue = 0;
+
+    if (card === "2") {
       cardValue = 2;
     }
-    if (card.cards[0].value === "3") {
+    if (card === "3") {
       cardValue = 3;
     }
-    if (card.cards[0].value === "4") {
+    if (card === "4") {
       cardValue = 4;
     }
-    if (card.cards[0].value === "5") {
+    if (card === "5") {
       cardValue = 5;
     }
-    if (card.cards[0].value === "6") {
+    if (card === "6") {
       cardValue = 6;
     }
-    if (card.cards[0].value === "7") {
+    if (card === "7") {
       cardValue = 7;
     }
-    if (card.cards[0].value === "8") {
+    if (card === "8") {
       cardValue = 8;
     }
-    if (card.cards[0].value === "9") {
+    if (card === "9") {
       cardValue = 9;
     }
-    if (card.cards[0].value === "10") {
+    if (card === "10") {
       cardValue = 10;
     }
-    if (card.cards[0].value === "JACK") {
+    if (card === "JACK") {
       cardValue = 11;
     }
-    if (card.cards[0].value === "QUEEN") {
+    if (card === "QUEEN") {
       cardValue = 12;
     }
-    if (card.cards[0].value === "KING") {
-      cardValue = 12;
+    if (card === "KING") {
+      cardValue = 13;
     }
-    if (card.cards[0].value === "ACE") {
-      cardValue = 12;
+    if (card === "ACE") {
+      cardValue = 14;
     }
     console.log("converted value", cardValue);
     return cardValue;
-  }
+  };
 });
 
 

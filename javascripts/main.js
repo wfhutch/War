@@ -16,6 +16,6 @@ requirejs.config({
   }
 });
 
-requirejs(["dependencies", "p1-draw", "p2-draw", "p1-deal", "p2-deal", "p1-turn", "p2-turn", "scoring", "convert-to-num"],
-  function(dependencies, p1Draw, p2Draw, p1Deal, p2Deal, p1Turn, p2Turn, scoring, convert) {
+requirejs(["dependencies", "deal", "draw", "p1-turn", "p2-turn", "scoring", "convert-to-num"],
+  function(dependencies, deal,  draw, p1Turn, p2Turn, scoring, convert) {
   });
