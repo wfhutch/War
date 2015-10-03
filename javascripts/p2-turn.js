@@ -29,12 +29,13 @@ define(function(require) {
       p2CardNum = convert(card.cards[0].value);
       console.log("p2 converted", p2CardNum);
       console.log("p2 remaining", card.remaining);
-      if (card.remaining === 0) {
-        scoring.winner();
-      }
       scoring.p2Value(p2CardNum);
       $("#p2draw").prop("disabled", true);
       $("#p1draw").prop("disabled", false);
+      if (card.remaining === 0) {
+        scoring.winner();
+        $("#p1draw").prop("disabled", true);
+      }
     });
   });
 });

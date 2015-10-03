@@ -28,18 +28,21 @@ define(function(require) {
           }
       $("#p1Score").html(p1Count);
       $("#p2Score").html(p2Count);
+
     },
 
     winner: function() {
       if (p1Count > p2Count) {
         $("#p1winner").removeClass("invisible");
-      } else if 
-          (p1Count < p2Count) {
+      }
+      if (p1Count < p2Count) {
             $("#p2winner").removeClass("invisible");
-        } else if 
-            (p1Count == p2Count) {
-              $("tie").removeClass("invisible");
-            }
+      }
+      if (p1Count === p2Count) {
+            $("#tie").removeClass("invisible");
+            console.log("TIE");
+      }
+            
     }
 
   };

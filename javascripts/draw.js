@@ -7,7 +7,7 @@ define (["jquery", "q"], function($, Q) {
     var deferred = Q.defer();
 
     $.ajax ({
-      url: "http://deckofcardsapi.com/api/deck/" + id + "/draw/?count=1"
+      url: "http://deckofcardsapi.com/api/deck/" + id + "/draw/?count=15"
     })
     .done(function(data) {
       console.log(data);

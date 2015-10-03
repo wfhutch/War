@@ -15,7 +15,7 @@ body {
   margin-left: 20px; }
 
 .score {
-  font-size: 20px; }
+  font-size: 24px; }
 
 .heading {
   margin-left: 20px;
@@ -27,9 +27,12 @@ body {
   border: 3px solid black; }
 
 .winner {
-  color: red; }
+  color: red;
+  text-align: center;
+  font-size: 2em; }
 
 .war {
-  text-align: center; }
+  text-align: center;
+  text-shadow: 4px 4px #b03060; }
 
 /*# sourceMappingURL=main.css.map */
